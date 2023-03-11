@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="assets/icons/favicon.ico" />
+<title>Simple HTML Form</title>
+
+<script>
+  function finish(event) {
+    event.preventDefault();
+    alert("Form submitted successfully!");
+  }
+</script>
+
+<style>
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+  }
+</style>
+
+<body>
+  <div class="w3-card-2 w3-display-middle w3-col s4">
+    <form class="w3-container" onsubmit="return finish(event)">
+      <p>
+        <label for="name-field" class="w3-text-teal">
+          <strong>Name</strong>
+        </label>
+        <input required id="name-field" class="w3-input w3-border w3-text-teal" name="name" type="text">
+      </p>
+      <p>
+        <label for="phone-field" class="w3-text-teal">
+          <strong>Phone Number</strong>
+        </label>
+        <input required id="phone-field" class="w3-input w3-border w3-text-teal" name="phone" type="tel">
+      </p>
+      <p>
+        <label for="email-field" class="w3-text-teal">
+          <strong>Email Address</strong>
+        </label>
+        <input required id="email-field" class="w3-input w3-border w3-text-teal" name="email" type="email">
+      </p>
+      <p>
+        <label for="password-field" class="w3-text-teal">
+          <strong>Password</strong>
+        </label>
+        <input required id="password-field" class="w3-input w3-border w3-text-teal" name="password" type="password">
+      </p>
+      <p>
+        <label for="gender-field" class="w3-text-teal">
+          <strong>Gender</strong>
+        </label>
+        <select id="gender-field" class="w3-select" name="gender">
+          <option value="male" selected>Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </p>
+      <p>
+        <button class="w3-btn w3-teal">Submit</button>
+      </p>
+    </form>
+  </div>
+</body>
+
+</html>
